@@ -26,4 +26,13 @@ class Song
   def self.genres
     @@genres.uniq!
   end
+
+  def self.genre_count(genre)
+    genres = {}
+    if @@genres.include?(genre)
+      genres[genre] += 1
+    else
+      genres[genre] = 1
+    end
+  end
 end
