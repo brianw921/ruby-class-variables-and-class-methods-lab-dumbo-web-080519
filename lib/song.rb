@@ -28,13 +28,14 @@ class Song
   end
 
   def self.genre_count
-    genres = Hash.new(0)
+    hash = Hash.new(0)
     @@genres.each do |genre|
       if @@genres.include?(genre)
-        genres[genre] += 1
+        hash [genre] += 1
       else
-        genres[genre] = 1
+        hash[genre] = 1
       end
     end
+    hash
   end
 end
