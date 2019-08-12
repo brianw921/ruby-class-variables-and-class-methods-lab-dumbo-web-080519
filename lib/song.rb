@@ -28,7 +28,7 @@ class Song
   end
 
   def self.genre_count(genre)
-    genres = Hash.new()
+    genres = Hash.new(0)
     if @@genres.include?(genre)
       genres[genre] += 1
     else
